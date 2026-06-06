@@ -1,0 +1,65 @@
+.benefits {
+    background-color: var(--color-bg-light);
+    padding: 40px 0;
+}
+
+.benefits__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.benefits__item {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.benefits__item.active {
+    border-color: var(--color-bg-dark);
+}
+
+.benefits__summary {
+    padding: 18px;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.benefits__icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Поворот стрелки при активации */
+.benefits__item.active .benefits__icon {
+    transform: rotate(180deg);
+}
+
+/* Скрываем контент по дефолту, анимацию делает JS через max-height */
+.benefits__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefits__content p {
+    padding: 0 18px 18px;
+    color: var(--color-text-muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .benefits__list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}

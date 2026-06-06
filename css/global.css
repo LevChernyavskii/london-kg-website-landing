@@ -1,0 +1,118 @@
+:root {
+    /* Цветовая палитра */
+    --color-bg-dark: #0A1931;
+    --color-bg-light: #FFFFFF;
+    --color-text-light: #FFFFFF;
+    --color-text-dark: #1F2937;
+    --color-text-muted: #4B5563;
+    --color-accent: #991B1B; /* Темновато-красный */
+    --color-accent-hover: #7F1D1D;
+    --color-card-bg: #FFFFFF;
+    
+    /* Скругление углов (регулируй здесь) */
+    --border-radius: 12px;
+    
+    /* Отступы */
+    --container-padding: 16px;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter24pt-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter24pt-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter24pt-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter24pt-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;   
+}
+
+.container {
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Кнопка в Бишкекском стиле (симбиоз строгости и действия) */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    font-weight: 600;
+    padding: 14px 24px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s ease;
+    text-align: center;
+    width: 100%;
+}
+
+/* Стили для анимации появления элементов */
+.anim-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.anim-fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+    .btn-primary {
+        width: auto;
+    }
+    .container {
+        margin: 0 auto;
+        --container-padding: 32px;
+    }
+}
+
+/* Заголовки секций */
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .section-title {
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}

@@ -1,0 +1,15 @@
+СТРУКТУРА САЙТА
+├── index.html
+└── css/
+    ├── normalize.css
+    ├── global.css
+    ├── header.css
+    ├── hero.css
+    ├── teachers.css
+    ├── courses.css
+    ├── benefits.css
+    ├── reviews.css
+    ├── lead.css
+    └── footer.css
+└── script.js
+└── README.md

@@ -1,0 +1,45 @@
+.courses {
+    background-color: var(--color-bg-light);
+    padding: 40px 0;
+
+    border-bottom: 2px solid var(--color-bg-dark);
+}
+
+.courses__table {
+    display: flex;
+    flex-direction: column;
+}
+
+.courses__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.courses__row:first-child {
+    border-top: 1px solid #E5E7EB;
+}
+
+.courses__name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.courses__price {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-bg-dark);
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+    .courses__table {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .courses__name, .courses__price {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,58 @@
+.footer {
+    background-color: #050B14; /* Еще темнее основного синего */
+    color: rgba(255, 255, 255, 0.7);
+    padding: 40px 0 20px;
+    font-size: 14px;
+}
+
+.footer__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.footer__info-title {
+    color: var(--color-text-light);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.footer__map-placeholder {
+    width: 100%;
+    height: 180px;
+    background: #1F2937;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.footer__instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #E1306C; /* Цвет инсты для акцента */
+    font-weight: 600;
+}
+
+.footer__copy {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .footer__grid {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .footer__block {
+        flex: 1;
+    }
+    .footer__map-placeholder {
+        height: 220px;
+    }
+}

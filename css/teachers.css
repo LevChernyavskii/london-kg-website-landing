@@ -1,0 +1,67 @@
+.teachers {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 60px 0;
+}
+
+.teachers__slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-bottom: 16px;
+    /* Прячем дефолтный скроллбар */
+    scrollbar-width: none; 
+}
+
+.teachers__slider::-webkit-scrollbar {
+    display: none;
+}
+
+.teachers__card {
+    flex: 0 0 85%; /* Видно край следующей карточки */
+    scroll-snap-align: center;
+    background-color: var(--color-card-bg);
+    color: var(--color-text-dark);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.teachers__img-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #E5E7EB;
+    border-radius: calc(var(--border-radius) - 4px);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+}
+
+.teachers__name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.teachers__info {
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+    .teachers__slider {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        overflow-x: visible;
+    }
+    .teachers__card {
+        flex: none;
+    }
+}
