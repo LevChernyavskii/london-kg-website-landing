@@ -44,6 +44,18 @@
     font-size: 12px;
 }
 
+.map-wrapper {
+    width: 100%;
+    max-width: 600px; /* Чтобы карта гармонично смотрелась справа от контактов */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.map-wrapper iframe {
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     .footer__grid {
         flex-direction: row;
